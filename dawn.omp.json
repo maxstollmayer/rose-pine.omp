@@ -1,0 +1,175 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "version": 2,
+    "final_space": false,
+    "console_title_template": "{{ .Shell }} in {{ .Folder }}",
+    "palette": {
+        "base": "#faf4ed",
+        "surface": "#fffaf3",
+        "overlay": "#f2e9e1",
+        "muted": "#9893a5",
+        "subtle": "#797593",
+        "text": "#575279",
+        "love": "#b4637a",
+        "gold": "#ea9d34",
+        "rose": "#d7827e",
+        "pine": "#286983",
+        "foam": "#56949f",
+        "iris": "#907aa9",
+        "highlight-low": "#f4ede8",
+        "highlight-med": "#dfdad9",
+        "highlight-high": "#cecacd",
+        "true": "p:pine",
+        "false": "p:love",
+        "os-fg": "p:text",
+        "os-bg": "p:overlay",
+        "root-fg": "p:base",
+        "root-bg": "p:gold",
+        "path": "p:gold",
+        "git": "p:iris",
+        "docker": "p:foam",
+        "go": "p:rose",
+        "haskell": "p:rose",
+        "julia": "p:rose",
+        "lua": "p:rose",
+        "python": "p:rose",
+        "rust": "p:rose",
+        "exectime": "p:subtle",
+        "time": "p:text"
+    },
+    "transient_prompt": {
+        "foreground": "p:time",
+        "template": "{{ now | date \"15:04:05\" }} {{ if gt .Code 0 }}<p:false>\u276f</>{{ else }}<p:true>\u276f</>{{ end }} "
+    },
+    "blocks": [
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "os",
+                    "style": "diamond",
+                    "trailing_diamond": "\ue0b0",
+                    "foreground": "p:os-fg",
+                    "background": "p:os-bg",
+                    "foreground_templates": [
+                        "{{ if .Root }}p:root-fg{{ end }}"
+                    ],
+                    "background_templates": [
+                        "{{ if .Root }}p:root-bg{{ end }}"
+                    ],
+                    "template": " {{ .Icon }} ",
+                    "properties": {
+                        "windows": "\ue70f"
+                    }
+                },
+                {
+                    "type": "path",
+                    "style": "plain",
+                    "foreground": "p:path",
+                    "template": " {{ .Path }} ",
+                    "properties": {
+                        "home_icon": "~",
+                        "folder_icon": "..",
+                        "style": "agnoster_short"
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "plain",
+                    "foreground": "p:git",
+                    "template": "{{ .HEAD }} ",
+                    "properties": {
+                        "branch_icon": "\ue725 ",
+                        "cherry_pick_icon": "\ue29b ",
+                        "commit_icon": "\uf417 ",
+                        "fetch_status": false,
+                        "fetch_stash_count": false,
+                        "fetch_upstream_icon": false,
+                        "merge_icon": "\ue727 ",
+                        "no_commits_icon": "\uf0c3 ",
+                        "rebase_icon": "\ue728 ",
+                        "revert_icon": "\uf0e2 ",
+                        "tag_icon": "\uf412 "
+                    }
+                },
+                {
+                    "type": "docker",
+                    "style": "plain",
+                    "foreground": "p:docker",
+                    "template": "\uf308 {{ .Context }} "
+                },
+                {
+                    "type": "go",
+                    "style": "plain",
+                    "foreground": "p:go",
+                    "template": "\ue627 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "haskell",
+                    "style": "plain",
+                    "foreground": "p:haskell",
+                    "template": "\ue61f {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "julia",
+                    "style": "plain",
+                    "foreground": "p:julia",
+                    "template": "\ue624 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "lua",
+                    "style": "plain",
+                    "foreground": "p:lua",
+                    "template": "\ue620 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "python",
+                    "style": "plain",
+                    "foreground": "p:python",
+                    "template": "\ue73c {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+                    "properties": {
+                        "display_default": false,
+                        "display_mode": "context"
+                    }
+                },
+                {
+                    "type": "rust",
+                    "style": "plain",
+                    "foreground": "p:rust",
+                    "template": "\ue7a8 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} "
+                },
+                {
+                    "type": "executiontime",
+                    "style": "plain",
+                    "foreground": "p:exectime",
+                    "template": "\udb81\udd1f {{ .FormattedMs }} ",
+                    "properties": {
+                        "threshold": 500,
+                        "style": "austin"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "newline": true,
+            "segments": [
+                {
+                    "type": "status",
+                    "style": "plain",
+                    "foreground": "p:true",
+                    "foreground_templates": [
+                        "{{ if gt .Code 0 }}p:false{{ end }}"
+                    ],
+                    "template": "\u276f ",
+                    "properties": {
+                        "always_enabled": true
+                    }
+                }
+            ]
+        }
+    ]
+}
