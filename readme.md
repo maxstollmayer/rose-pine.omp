@@ -178,7 +178,22 @@ exec zsh
 
 ## Gallery
 
-![Rosé Pine with Oh My Posh](https://user-images.githubusercontent.com/1474821/166155319-06796439-95a7-4aea-910e-927c1f24518e.png)
+> Font used is [JetBrainsMono Nerd Font](https://www.nerdfonts.com/)
+
+<details>
+<summary>Rosé Pine</summary>
+<img src="assets/rose-pine.png"/>
+</details>
+
+<details>
+<summary>Rosé Pine Moon</summary>
+<img src="assets/moon.png"/>
+</details>
+
+<details>
+<summary>Rosé Pine Dawn</summary>
+<img src="assets/dawn.png"/>
+</details>
 
 ## Customization
 
