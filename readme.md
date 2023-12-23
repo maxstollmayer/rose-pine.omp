@@ -180,20 +180,17 @@ exec zsh
 
 > Font used is [JetBrainsMono Nerd Font](https://www.nerdfonts.com/)
 
-<details>
-<summary>Rosé Pine</summary>
-<img src="assets/rose-pine.png"/>
-</details>
+**Rosé Pine**
 
-<details>
-<summary>Rosé Pine Moon</summary>
-<img src="assets/moon.png"/>
-</details>
+![Rosé Pine with Oh My Posh](./assets/rose-pine.png)
 
-<details>
-<summary>Rosé Pine Dawn</summary>
-<img src="assets/dawn.png"/>
-</details>
+**Rosé Pine Moon**
+
+![Rosé Pine Moon with Oh My Posh](./assets/moon.png)
+
+**Rosé Pine Dawn**
+
+![Rosé Pine Dawn with Oh My Posh](./assets/dawn.png)
 
 ## Customization
 
